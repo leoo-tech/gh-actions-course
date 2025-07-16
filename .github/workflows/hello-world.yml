@@ -6,5 +6,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Fazer checkout do código
+        uses: actions/checkout@v3
       - name: Exibir mensagem no terminal
-        run: echo "Olá, GitHub Actions!"
+        run: echo "Código clonado com sucesso!"
