@@ -1,0 +1,17 @@
+# Nome do nosso segundo workflow
+name: 05 - 2 - Event Filters and Activity Types
+
+on:
+  pull_request:
+    # A MUDANÇA: Agora só nos importamos com o tipo 'closed'
+    types: [closed]
+    # A regra da branch de destino 'main' continua valendo
+    branches:
+      - main
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show message on close
+        run: echo "Rodando porque o PR para a branch main foi fechado."
