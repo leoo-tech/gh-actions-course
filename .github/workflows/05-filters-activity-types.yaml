@@ -1,0 +1,21 @@
+# Nome que vai aparecer na aba "Actions" do GitHub
+name: 05 - 1 - Event Filters and Activity Types
+
+on:
+  # O gatilho principal é um pull_request
+  pull_request:
+    # Tipos de Atividade: Só vai rodar se o PR for 'aberto' OU 'sincronizado'
+    types: [opened, synchronize]
+    # Filtro de Evento: E a branch de destino (base) do PR PRECISA ser a 'main'
+    branches:
+      - main
+
+jobs:
+  # Nome do nosso único job
+  echo:
+    # Rodando em uma máquina virtual do Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # A única etapa é imprimir uma mensagem na tela
+      - name: Show message
+        run: echo "Rodando porque um PR foi aberto/sincronizado para a branch main."
