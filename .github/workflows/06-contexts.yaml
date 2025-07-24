@@ -7,7 +7,6 @@ env:
   MY_OVERWRITTEN_VAR: 'workflow'
 
 on:
-  push:
   # ADICIONE OS INPUTS AQUI
   workflow_dispatch:
     inputs:
