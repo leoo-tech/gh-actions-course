@@ -1,6 +1,8 @@
 # Nome que vai aparecer na aba "Actions"
 name: 06 - Contexts
 
+run-name: My custom workflow run name - ${{ runner.os }}
+
 on:
   push:
   workflow_dispatch:
