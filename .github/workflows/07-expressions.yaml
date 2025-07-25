@@ -3,7 +3,6 @@ name: 07 - Using Expressions
 # ADICIONE A LINHA ABAIXO
 run-name: 07 - Using Expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 on:
-  push:
   workflow_dispatch:
     # Definindo um input para o trigger manual
     inputs:
