@@ -1,6 +1,7 @@
 # Nome do nosso workflow
 name: 07 - Using Expressions
-
+# ADICIONE A LINHA ABAIXO
+run-name: 07 - Using Expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 on:
   push:
   workflow_dispatch:
